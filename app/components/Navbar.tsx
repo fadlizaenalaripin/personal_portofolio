@@ -12,13 +12,13 @@ const navLinks = [
 ];
 
 const menuVariants = {
-  closed: { clipPath: "circle(0% at calc(100% - 52px) 52px)", transition: { duration: 0.7, ease: [0.76, 0, 0.24, 1] } },
-  open:   { clipPath: "circle(150% at calc(100% - 52px) 52px)", transition: { duration: 0.7, ease: [0.76, 0, 0.24, 1] } },
+  closed: { clipPath: "circle(0% at calc(100% - 52px) 52px)", transition: { duration: 0.7, ease: [0.76, 0, 0.24, 1] as const } },
+  open:   { clipPath: "circle(150% at calc(100% - 52px) 52px)", transition: { duration: 0.7, ease: [0.76, 0, 0.24, 1] as const } },
 };
 
 const linkVariants = {
   closed: { y: 80, opacity: 0 },
-  open:   (i: number) => ({ y: 0, opacity: 1, transition: { delay: 0.1 + i * 0.08, duration: 0.7, ease: [0.33, 1, 0.68, 1] } }),
+  open:   (i: number) => ({ y: 0, opacity: 1, transition: { delay: 0.1 + i * 0.08, duration: 0.7, ease: [0.33, 1, 0.68, 1] as const } }),
 };
 
 export default function Navbar() {
